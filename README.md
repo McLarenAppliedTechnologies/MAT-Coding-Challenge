@@ -27,7 +27,7 @@ Live data from a Formula 1 race has been recorded and streamed into our system. 
 
 Raw telemetry data is arriving via MQTT. A basic front-end application has been developed to visualize cars going around a track. It can also display an event stream and car status information such as speed and position, but currently it is not receiving this information.
 
-Please develop a data processing application which subscribes to the provided MQTT broker and consumes data from the following MQTT topics:
+Please develop a data processing application which subscribes to the provided MQTT broker and consumes data from the following MQTT topic:
 
 * **carCoordinates**
 
