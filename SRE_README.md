@@ -8,14 +8,19 @@
 ## Introduction
 
 The purpose of this challenge is for you to demonstrate:
+
+* The use of IaC (Infrastructure as Code) to deploy the solution to a cloud provider of your choice
 * The ability to document (instructions) of how to run and test your deployment.
-* The development of a MQTT client that subscribes to telemetry, receives the data, and persists to a data store.
+* Writing and structuring a simple backend application in an appropriate language of your choice.
+* Parsing and transforming streamed telemetry data.
+* Receiving and storing data.
+* Delivering a component to integrate into a stack of technologies.
 * Configuration Management code (e.g. Puppet/Chef/Ansible) and/or Dockerfile(s) or equivalent code that deploys:
   * a suitable storage medium (your persistent store)
   * the MQTT data archiver you create in an appropriate language of your choice
+  * a tool to visualise the collected data
   * any additional service you think is appropriate for such a platform
-* A public cloud deployment plan
-
+  
 Feel free to use any libraries, frameworks or dependencies you want in order to achieve the task.
 
 Please include instructions on how to build and run your code, any tests you've written and some text explaining what you did (an overview).
@@ -30,8 +35,9 @@ Real-time data from a Formula 1 race has been recorded and streamed into our sys
 
 Raw telemetry data is arriving via MQTT. A basic front-end application has been developed to visualise F1 cars going around a track. It can also display an event stream and car status information such as speed and position, but currently it is not receiving this information.
 
-Please develop a data storage application which subscribes to the provided MQTT broker and consumes data from the following MQTT topic with the format shown and stores them to a meaningful medium.
-Additionally please provide on the README file a strategy of deploying this solution to the public cloud provider of your choice.
+Please develop an application which subscribes to the provided MQTT broker and consumes data from the following MQTT topic with the format shown and stores them to a meaningful medium. A visualisation tool should also be deployed to read the collected data source to provide meaningful metrics.
+
+Additionally please provide an example IaC (e.g CloudFormation / Terraform) with instructions on how to deploy, scale and secure the application.
 
 * **carCoordinates**
 
